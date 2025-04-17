@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../src/StyleSheet.css">
+		<script src="src/cart.js"></script>
+	</head>
+	<body onload = "refreshcart();">
+	<header>
+		<div class="flex">
+			<div class="flexbanner">
+				<a href="../index.html"><img src="../medias/Banner.jpg" alt="banner"></a>
+			</div>
+			<div>
+				<h1>Welcome!</h1>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn">Shopping cart</button>
+				<div class="dropdown-content">
+					<p id="ajax" class = "carttext"></p>
+					<button id=checkout class="checkout" onclick="window.open('https://buymeacoffee.com/greenmeeple');"></button>
+				</div>
+			</div>
+		</div>
+	</header>	<div class="overlay">
+		<img src="../medias/Error.png" alt="Error">
+  	<h1>ERROR!</h1>
+		</br>
+  	<p style="font-size:50px">Page Not Exist. Press picture below to go back.</p>
+		<a href="../index.html"><img src="../medias/Banner.jpg" alt="banner"></a>
+	</div>	<div class="footer">
+		<a href="../admin/admin.php.html">Admin Panel</a>
+	</div>
+	</body>
+	</html>	

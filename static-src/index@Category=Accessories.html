@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../src/StyleSheet.css">
+		<script src="src/cart.js"></script>
+	</head>
+	<body onload = "refreshcart();">
+	<header>
+		<div class="flex">
+			<div class="flexbanner">
+				<a href="../index.html"><img src="../medias/Banner.jpg" alt="banner"></a>
+			</div>
+			<div>
+				<h1>Welcome!</h1>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn">Shopping cart</button>
+				<div class="dropdown-content">
+					<p id="ajax" class = "carttext"></p>
+					<button id=checkout class="checkout" onclick="window.open('https://buymeacoffee.com/greenmeeple');"></button>
+				</div>
+			</div>
+		</div>
+	</header><ul class = "nav"><li><a href="../index.html">index</a></li><li><a href="index@Category=news.html">News</a></li><li><a href = "index@Category=Boardgames.html"> Boardgames</a></li><li><a class="active" href = "index@Category=Accessories.html"> Accessories</a></li><li><a href = "index@Category=Others.html"> Others</a></li><li><a href="index@Category=info.html">More Info.</a></li></ul><ul class = "product"><li><a href = "index@Category=1.html"><img src="../medias/1.jpg"> WoodenMeeple</a></br><button onclick = "addtocart(1)" class="styled">Add to cart</button></li><li><a href = "index@Category=2.html"><img src="../medias/2.jpg"> CardSleeves</a></br><button onclick = "addtocart(2)" class="styled">Add to cart</button></li></ul>	<div class="footer">
+		<a href="../admin/admin.php.html">Admin Panel</a>
+	</div>
+	</body>
+	</html>	

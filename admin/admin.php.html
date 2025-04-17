@@ -1,0 +1,179 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+			*{
+				margin: 0;
+				padding: 0;
+				font-size: 100%;
+				font-family: Arial, Helvetica, sans-serif;
+				}
+
+      header {
+				margin-top:0px;
+  			background-color: SeaGreen;
+  			color: white;
+			}	
+			.flex{
+  			display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content:flex-start;
+			}
+
+			div h1 {
+				flex: 0 0 50%;
+				padding: 25px 15px;
+  			font-size: 32px;
+				align-self: center;
+				text-align: center;
+			}
+
+			.flexbanner {
+				flex: 0 0 25%;	
+				align-self: flex-end;
+			}
+
+			.flexbanner img {
+				max-width: 100%;
+			}
+
+      body {
+        background-color: #FFF;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+
+			.admin{
+				padding-left: 25px;
+    		display: block;
+    		margin: 0 auto;
+				width: fit-content;			
+				}
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+			<div class="flex">
+				<div class="flexbanner">
+					<a href="../index.html"><img src="../medias/Banner.jpg" alt="banner"></a>
+				</div>
+				<div>
+					<h1>Please be reminded that this is your admin panel</h1>
+				</div>
+     	</div>
+    </header>
+
+    <fieldset class = "admin">
+        <legend> New Product</legend>
+        <form id="prod_insert" method="POST" action="" enctype="multipart/form-data">
+
+            <label for="prod_catid"> Category *</label>
+            <div> <select id="prod_catid" name="catid"><option value="1"> Boardgames </option><option value="2"> Accessories </option><option value="3"> Others </option></select></div>
+
+            <label for="prod_name"> Name *</label>
+            <div> <input id="prod_name" type="text" name="name" required="required" pattern="^[\w\-]+$"/></div>
+
+            <label for="prod_price"> Price *</label>
+            <div> <input id="prod_price" type="text" name="price" required="required" pattern="^\d+\.?\d*$"/></div>
+
+            <label for="prod_desc"> Description *</label>
+            <div> <input id="prod_desc" type="text" name="description"/> </div>
+
+            <label for="prod_image"> Image * </label>
+            <div> <input type="file" name="file" required="true" accept="image/jpeg/jpg/png"/> </div>
+
+            <input type="submit" onclick="alert('This is a static demo.')" value="Submit"/>
+        </form>
+    </fieldset>
+  </body>
+</html>
+
+<fieldset class="admin">
+    <legend> Product List </legend>
+    <table border="1" cellpadding="5">
+        <tr><th>PID</th><th>Name</th><th>Price</th><th>Description</th><th>Actions</th></tr>
+        <tr>
+        <td>1</td>
+        <td>WoodenMeeple</td>
+        <td>100</td>
+        <td>10 different colors with 10 of each, come in reusable plastic bag.</td>
+        <td>
+            <form method="POST" onclick="alert('This is a static demo.')" style="display:inline;">
+                <input type="hidden" name="pid" value="1"/>
+                <input type="submit" value="Delete"/>
+            </form>
+            <form method="POST" action="admin-edit.php@pid=1.html" style="display:inline;">
+                <input type="hidden" name="pid" value="1"/>
+                <input type="submit" value="Edit"/>
+            </form>
+        </td>
+    </tr><tr>
+        <td>2</td>
+        <td>CardSleeves</td>
+        <td>25</td>
+        <td>Magnum Card Sleeves 100 packs</td>
+        <td>
+            <form method="POST" onclick="alert('This is a static demo.')" style="display:inline;">
+                <input type="hidden" name="pid" value="2"/>
+                <input type="submit" value="Delete"/>
+            </form>
+            <form method="POST" action="admin-edit.php@pid=2.html" style="display:inline;">
+                <input type="hidden" name="pid" value="2"/>
+                <input type="submit" value="Edit"/>
+            </form>
+        </td>
+    </tr><tr>
+        <td>3</td>
+        <td>VinhosDeluxeEdition</td>
+        <td>720</td>
+        <td>The Strategic craft of fine winemaking, designed by Vital Lacerda.</td>
+        <td>
+            <form method="POST" onclick="alert('This is a static demo.')" style="display:inline;">
+                <input type="hidden" name="pid" value="3"/>
+                <input type="submit" value="Delete"/>
+            </form>
+            <form method="POST" action="admin-edit.php@pid=3.html" style="display:inline;">
+                <input type="hidden" name="pid" value="3"/>
+                <input type="submit" value="Edit"/>
+            </form>
+        </td>
+    </tr><tr>
+        <td>4</td>
+        <td>RussianRailroads</td>
+        <td>390</td>
+        <td>Acquire locomotives &amp; industry, build track, and hire the best engineers in Russia, designed by Helmut Ohley &amp; Leonhard Orgler.</td>
+        <td>
+            <form method="POST" onclick="alert('This is a static demo.')" style="display:inline;">
+                <input type="hidden" name="pid" value="4"/>
+                <input type="submit" value="Delete"/>
+            </form>
+            <form method="POST" action="admin-edit.php@pid=4.html" style="display:inline;">
+                <input type="hidden" name="pid" value="4"/>
+                <input type="submit" value="Edit"/>
+            </form>
+        </td>
+    </tr><tr>
+        <td>5</td>
+        <td>GreenMeeple</td>
+        <td>0</td>
+        <td>This is my first MySQL and PHP project. For more details please check my personal blog https://greenmeeple.github.io/</td>
+        <td>
+            <form method="POST" onclick="alert('This is a static demo.')" style="display:inline;">
+                <input type="hidden" name="pid" value="5"/>
+                <input type="submit" value="Delete"/>
+            </form>
+            <form method="POST" action="admin-edit.php@pid=5.html" style="display:inline;">
+                <input type="hidden" name="pid" value="5"/>
+                <input type="submit" value="Edit"/>
+            </form>
+        </td>
+    </tr>    </table>
+</fieldset>
