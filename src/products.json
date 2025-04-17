@@ -1,13 +1,37 @@
 [
     {
-      "pid": 1,
-      "name": "WoodenMeeple",
-      "price": 100
+        "catid": 2,
+        "description": "10 different colors with 10 of each, come in reusable plastic bag.",
+        "name": "WoodenMeeple",
+        "pid": 1,
+        "price": 100.0
     },
     {
-      "pid": 2,
-      "name": "BoardGameX",
-      "price": 240
+        "catid": 2,
+        "description": "Magnum Card Sleeves 100 packs",
+        "name": "CardSleeves",
+        "pid": 2,
+        "price": 25.0
+    },
+    {
+        "catid": 1,
+        "description": "The Strategic craft of fine winemaking, designed by Vital Lacerda.",
+        "name": "VinhosDeluxeEdition",
+        "pid": 3,
+        "price": 720.0
+    },
+    {
+        "catid": 1,
+        "description": "Acquire locomotives & industry, build track, and hire the best engineers in Russia, designed by Helmut Ohley & Leonhard Orgler.",
+        "name": "RussianRailroads",
+        "pid": 4,
+        "price": 390.0
+    },
+    {
+        "catid": 3,
+        "description": "This is my first MySQL and PHP project. For more details please check my personal blog https://greenmeeple.github.io/",
+        "name": "GreenMeeple",
+        "pid": 5,
+        "price": 0.0
     }
-  ]
-  
+]

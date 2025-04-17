@@ -15,9 +15,11 @@ function addtocart(pid){
 }
 
 function getdata(pid){
-	fetch('src/products.json').then(r => r.json()).then(console.log)
-
-		.then(response => response.json())
+	fetch('./src/products.json')
+		.then(response => {
+			if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+			return response.json();
+		})
 		.then(products => {
 			const data = products.find(p => p.pid == pid);
 			if (data) {
@@ -27,9 +29,10 @@ function getdata(pid){
 				console.error('Product not found in products.json:', pid);
 			}
 		})
-		.catch(err => console.error('Failed to load product data', err));
+		.catch(err => {
+			console.error('Failed to load product data:', err);
+		});
 }
-
 
 function refreshcart(){
 	var cart = document.getElementById("ajax");
